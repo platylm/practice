@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func Test_Input_Id_1_GetProduct_Add_Should_Be_Json_Product(t *testing.T) {
+func Test_Input_Id_1_GetProductHandler_Add_Should_Be_Json_Product(t *testing.T) {
 
 	expected := Product{
 		Id:    1,
