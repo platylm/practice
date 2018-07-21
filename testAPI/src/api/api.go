@@ -11,7 +11,7 @@ type Product struct {
 	Price float64 `json:"price"`
 }
 
-func GetProduct(w http.ResponseWriter, r *http.Request) {
+func GetProductHandler(w http.ResponseWriter, r *http.Request) {
 	product := Product{
 		Id:    1,
 		Name:  "ลำโพง",

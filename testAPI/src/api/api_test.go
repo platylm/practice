@@ -19,7 +19,7 @@ func Test_Input_Id_1_GetProduct_Add_Should_Be_Json_Product(t *testing.T) {
 	request := httptest.NewRequest("GET", "http://localhost:3000/add?id=1", nil)
 	responseRecorder := httptest.NewRecorder()
 
-	GetProduct(responseRecorder, request)
+	GetProductHandler(responseRecorder, request)
 
 	response := responseRecorder.Result()
 	body, _ := ioutil.ReadAll(response.Body)
