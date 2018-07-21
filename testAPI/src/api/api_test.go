@@ -16,13 +16,13 @@ func Test_Input_Id_1_GetProduct_Add_Should_Be_Json_Product(t *testing.T) {
 		Price: 100.00,
 	}
 
-	req := httptest.NewRequest("GET", "http://localhost:3000/add?id=1", nil)
-	w := httptest.NewRecorder()
+	request := httptest.NewRequest("GET", "http://localhost:3000/add?id=1", nil)
+	responseRecorder := httptest.NewRecorder()
 
-	GetProduct(w, req)
+	GetProduct(responseRecorder, request)
 
-	resp := w.Result()
-	body, _ := ioutil.ReadAll(resp.Body)
+	response := responseRecorder.Result()
+	body, _ := ioutil.ReadAll(response.Body)
 
 	var respJson Product
 	json.Unmarshal(body, &respJson)
